@@ -1,0 +1,10 @@
+type hive @model {
+  id: ID!
+  deviceId: String!
+  temp: String!
+  humidity: String!
+  co2: String!
+  tvoc: String!
+  freq: String!
+  timeStamp: String!
+}

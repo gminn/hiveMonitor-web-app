@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hivemonitor-dev-170906-authRole",
+      "UnauthRoleArn": "arn:aws:iam::102805192260:role/amplify-hivemonitor-dev-170906-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::102805192260:role/amplify-hivemonitor-dev-170906-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-hivemonitor-dev-170906-deployment",
+      "UnauthRoleName": "amplify-hivemonitor-dev-170906-unauthRole",
+      "StackName": "amplify-hivemonitor-dev-170906",
+      "StackId": "arn:aws:cloudformation:us-east-2:102805192260:stack/amplify-hivemonitor-dev-170906/dc8054f0-2145-11eb-b941-0a1ddb0e33b6",
+      "AmplifyAppId": "d2u7siaeq14a27"
+    }
+  }
+}
