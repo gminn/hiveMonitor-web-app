@@ -1,6 +1,6 @@
 # Hive Monitor Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the repo for the web application for advanced embedded systems senior design project. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
