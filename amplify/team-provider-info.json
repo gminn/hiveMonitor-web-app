@@ -10,6 +10,17 @@
       "StackName": "amplify-hivemonitor-dev-170906",
       "StackId": "arn:aws:cloudformation:us-east-2:102805192260:stack/amplify-hivemonitor-dev-170906/dc8054f0-2145-11eb-b941-0a1ddb0e33b6",
       "AmplifyAppId": "d2u7siaeq14a27"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2u7siaeq14a27",
+          "type": "manual"
+        }
+      },
+      "auth": {
+        "hivemonitor2dd567f7": {}
+      }
     }
   }
 }

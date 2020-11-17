@@ -1,6 +1,7 @@
 /* src/App.js */
 import React, { useEffect, useState } from 'react'
 import Amplify, { API, graphqlOperation } from 'aws-amplify'
+import { withAuthenticator } from '@aws-amplify/ui-react'
 import { createHive } from './graphql/mutations'
 import { listHives } from './graphql/queries'
 import { getHive } from './graphql/queries'
@@ -34,8 +35,8 @@ const App = () => {
 
   async function fetchOneHive() {
     try {
-      if (!formState.deviceId) return
-      const hive = await API.graphql(graphqlOperation(getHive, { id: formState.deviceId }))
+      if (!formState.id) return
+      const hive = await API.graphql(graphqlOperation(getHive, { id: formState.id }))
       console.log(formState.deivceId)
       setHives([hive.data.getHive])
       setFormState(initialState)
@@ -121,48 +122,4 @@ const styles = {
   button: { backgroundColor: 'black', color: 'white', outline: 'none', fontSize: 18, padding: '12px 0px' }
 }
 
-export default App
-
-
-{/* <input
-onChange={event => setInput('temp', event.target.value)}
-style={styles.input}
-value={formState.temp}
-placeholder="Temperature"
-/>
-<input
-onChange={event => setInput('deviceId', event.target.value)}
-style={styles.input}
-value= {formState.deviceId}
-placeholder="DeviceId"
-/>
-<input
-onChange={event => setInput('timeStamp', event.target.value)}
-style={styles.input}
-value={formState.timeStamp}
-placeholder="Timestamp"
-/>
-<input
-onChange={event => setInput('co2', event.target.value)}
-style={styles.input}
-value= {formState.co2}
-placeholder="CO2"
-/>
-<input
-onChange={event => setInput('humidity', event.target.value)}
-style={styles.input}
-value={formState.humidity}
-placeholder="Humidity"
-/>
-<input
-onChange={event => setInput('freq', event.target.value)}
-style={styles.input}
-value= {formState.freq}
-placeholder="Frequency"
-/>
-<input
-onChange={event => setInput('tvoc', event.target.value)}
-style={styles.input}
-value= {formState.tvoc}
-placeholder="TVOC"
-/>  */}
+export default withAuthenticator(App)
